@@ -198,15 +198,16 @@ p.over_float{
 /* main flexbox */
 .about__sec_row3_col1 img{
     flex: 1 1 30vw;
-    border: 3px slategray solid;
-    background-color: slategray;
-    border-radius: 3px;
+    /* border: 3px slategray solid; */
+    /* background-color: slategray; */
+    /* border-radius: 3px; */
 }
 .about__sec_row3_col2{
     flex: 1 1 70vw;
     display: flex;
     flex-direction: column;
     margin: 10px;
+    /* flex-wrap: wrap; */
     justify-content: flex-start;
 }
 /* section row-3 col-1 rows */
@@ -223,31 +224,39 @@ p.over_float{
     align-items: flex-start;
     justify-content: center;
     margin: 5px;
-    list-style-type: '> ';
+    list-style-type:none;;
+    /* list-style-image: url();  */
 }
+
+  
+  .row1_c ul li:before {
+    content: counter(item, disc) " ";
+    color: red;
+  }
 .row1_c ul li{
     padding: 0 10px 10px 0;
     margin: 5px;
 }
 .c2_row2{
     display: flex;
+    /* flex-basis: 50vw; */
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 10px;
-
+    justify-content: center;
+    align-items: center;
 }
 .row2_c{
     padding: 10px;
-    display:flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    flex:1 1 50%;
+    /* display:flex; */
 }
 
 .c2_row3{
     display: flex;
     width: 100%;
     flex-direction: column;
-    padding:0 240px 0 60px;
+    padding:0 60px 0 60px;
 }
 
 /*  PRogress Bars   */
@@ -425,7 +434,7 @@ font-size: 1.8rem;
 /* ------------------footer ----------------- */
 .background{
 
-    background-image: url(/images/pngtree-red-abstract-technology-background-picture-image_1184167.jpg);
+    background-image: url(/images/photo-1525547719571-a2d4ac8945e2.jpg);
 }
 .footer {
     display: flex;
@@ -434,7 +443,7 @@ font-size: 1.8rem;
     margin-top: 10px;
     height: 200px;
     background-size:cover;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
     
 }
 .fa {
@@ -449,6 +458,10 @@ font-size: 1.8rem;
 .fa:hover {
     opacity: 0.7;
     /* background-color: #dd4b39; */
+    filter: drop-shadow(2px 2px cyan);
+    height: 120%;
+    width: 60px;
+    height: 60px;
 }
 
 .fa-facebook {
@@ -484,7 +497,7 @@ font-size: 1.8rem;
 
 /* -------------------------  Media Queries   ----------------------------- */
 
-@media only screen and (max-width:700px){
+@media only screen and (max-width:768px){
     
     nav .navbox ul {
         flex-direction: column;
@@ -522,12 +535,15 @@ font-size: 1.8rem;
     .about__section_row3{
         flex-wrap: wrap;
     }
+    .c2_row2{
+        flex-direction: column;
+    }
     .c2_row3{
-        width: 130vw;
+        width: 100vw;
 
     }
     .background{
-        width: 110vw;
+        width: 100vw;
         height: 110%;
     }
 
