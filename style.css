@@ -389,6 +389,12 @@ font-size: 1.8rem;
 .res_content{
     border-left: 2px solid grey;
     z-index: 2;
+    /* margin-bottom: 10px; */
+    padding-bottom: 10px;
+}
+.resume_row2_col2 .res_content{
+    margin: 0;
+    padding: 0 0 14px 0;
 }
 .res_content .circle{
     display: inline-block;
@@ -424,12 +430,11 @@ font-size: 1.8rem;
     color: red;
     background-color: #0080ee;
 }
-.res_content p ul {
-    margin:0 0 3px 40px;
-    /* padding-left: 20px; */
-    /* padding-left: 0; */
-   
+
+.res_content ul li{
+    padding-top: 10px;
 }
+
 
 /* ------------------footer ----------------- */
 .background{
