@@ -6,10 +6,6 @@
     scroll-behavior: smooth;
 }
 
-
-
-
-
 /*############# NAV BAR############*/
 body {
     line-height: 1;
@@ -26,10 +22,12 @@ body {
 
 }
 
+
 /* ################# Header  ######################## */
 .header {
     background-image: url("./images/pic2.jpg");
     background-size: cover;
+    /* filter: opacity(0.6); */
     background-attachment: fixed;
     /* color: rgb(42, 92, 157); */
     height: 100vh;
@@ -47,7 +45,7 @@ body {
     height: 100vh;
     font-family: 'Oooh Baby', cursive;
     /* background: transparent; */
-    /* backdrop-filter: blur(12px); */
+    backdrop-filter: sepia(0.5);
     text-shadow: 10px 3px 20px black;
 }
 
@@ -60,7 +58,7 @@ nav {
     height: 5vh;
 
     /* background-color: rgba(20, 90, 164, 0.628); */
-    background-color: black;
+    /* background-color: black; */
     position: fixed;
     z-index: 10;
 }
@@ -120,6 +118,8 @@ nav .navbox ul.nav_item li.active {
     float: left;
     height: 5vh;
     z-index: 1;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 .title>span {
@@ -128,6 +128,13 @@ nav .navbox ul.nav_item li.active {
     filter: drop-shadow(1px 1px purple);
     font-family: 'Oooh Baby', cursive;
     font-size: 30px;
+    opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.title>span.activate{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
@@ -198,6 +205,8 @@ p.over_float{
 /* main flexbox */
 .about__sec_row3_col1 img{
     flex: 1 1 30vw;
+    /* padding: 20px; */
+    margin: 20px;
     /* border: 3px slategray solid; */
     /* background-color: slategray; */
     /* border-radius: 3px; */
@@ -275,6 +284,7 @@ p.over_float{
     border-radius: 50px;
     /* color: blue; */
 }
+
 .HTML_bar{
     display: inline-block;
     background: red;
